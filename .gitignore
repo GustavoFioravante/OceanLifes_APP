@@ -1,35 +1,47 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-
-# dependencies
+# Dependências
 node_modules/
+dependencies/
 
 # Expo
 .expo/
 dist/
 web-build/
 
-# Native
-*.orig.*
+# Nativo
+*.orig
 *.jks
 *.p8
 *.p12
 *.key
-*.mobileprovision
+.mobileprovision
 
 # Metro
-.metro-health-check*
+.metro-health-check
 
-# debug
-npm-debug.*
-yarn-debug.*
-yarn-error.*
+# Debugging
+npm-debug.log
+yarn-debug.log*
+yarn-error.log*
 
 # macOS
 .DS_Store
-*.pem
+.pem
 
-# local env files
-.env*.local
+# Arquivos de ambiente local
+.env.local
+.env.
 
-# typescript
+# TypeScript
 *.tsbuildinfo
+
+# Logs
+*.log
+
+# Editor e Sistema
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Git
+.git/

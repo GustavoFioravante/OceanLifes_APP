@@ -1,10 +1,13 @@
-import styled from "styled-components/native";
+import styled from 'styled-components';
+import { theme } from '../../standart';
 
 export const CustomText = styled.Text`
-    font-size: 48px;
-    font-weight: 700;
-    font-style: 'Atkinson Hyperlegible';
-    line-height: 59px;
-    color: ${({ color }) => color || '#fff'};
+    color: ${({ color, theme }) => color || theme.colors.white};
+    font-family:  'AtkinsonHyperlegible_700Bold';
+    font-size: ${({ theme}) => theme.metrics.px(50)}px;
+    line-height: ${({ theme}) => theme.metrics.px(59)}px;
+    letter-spacing: ${({ theme}) => theme.metrics.px(2)}px;
+    top: ${({ theme}) => theme.metrics.px(-338)}px;
+    left: ${({ theme}) => theme.metrics.px(-45)}px;
 `;
 
