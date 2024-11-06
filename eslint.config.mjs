@@ -4,6 +4,10 @@ import pluginReact from 'eslint-plugin-react'
 
 export default [
   {
+    rules: {
+      'no-console': 'off',
+      'no-undef': 'off',
+    },
     files: ['/*.{js,mjs,cjs,jsx}'],
     languageOptions: {
       globals: {

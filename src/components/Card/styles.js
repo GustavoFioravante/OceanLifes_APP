@@ -5,7 +5,7 @@ export const CardContainer = styled.TouchableOpacity`
   height: ${({ theme }) => theme.metrics.px(98)}px;
   border-radius: ${({ theme }) => theme.metrics.px(10)}px;
   overflow: hidden;
-  margin-right: ${({ theme }) => theme.metrics.px(12)};
+  margin-right: ${({ theme }) => theme.metrics.px(12)}px;
 `
 export const CardImage = styled.ImageBackground`
   width: 100%;

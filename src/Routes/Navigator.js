@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { HomePage } from '../screens/Home/Home'
+import { Home } from '../screens/Home/Home'
 import { SplashScreenWindow } from '../screens/SplashScreen/index'
 
 export const Routes = () => {
@@ -9,9 +9,9 @@ export const Routes = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name='Splash' component={SplashScreenWindow} />
-        <Stack.Screen name='Home' component={HomePage} />
+        <Stack.Screen name='Home' component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
   )
