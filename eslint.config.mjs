@@ -7,6 +7,12 @@ export default [
     rules: {
       'no-console': 'off',
       'no-undef': 'off',
+      'no-unused-vars': 'warn',
+    },
+    env: {
+      browser: true,
+      es2021: true,
+      node: true,
     },
     files: ['/*.{js,mjs,cjs,jsx}'],
     languageOptions: {
