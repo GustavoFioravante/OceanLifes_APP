@@ -6,17 +6,17 @@ import { Text } from '../Text/Text'
 import { Tag } from '../Tagg'
 import PropTypes from 'prop-types'
 
-export const Header = ({ item }) => {
+export const Header = ({ item, onDetail }) => {
   const { imageURL, title, subtitle, type } = item || {}
   return (
     <HeaderContainer>
-      <HeaderImageBackground source={imageURL}>
+      <HeaderImageBackground source={typeof imageURL === 'string' ? { uri: imageURL } : imageURL}>
         <HeaderGradient colors={['transparent', 'transparent', colors.AliceBlue]}>
           <ButtonsView>
-            <IconButton label='' iconName='list' />
-            <IconButton label='' iconName='person-circle' />
+            {!onDetail && <IconButton label='' iconName='list' />}
+            {!onDetail && <IconButton label='' iconName='person-circle' />}
           </ButtonsView>
-          <Tag mt={215}>{type}</Tag>
+          <Tag mt={onDetail ? 240 : 215}>{type}</Tag>
           <Text fontFamily={'bold'} size={30} mt={14} ml={10} color={'violet'}>
             {title}
           </Text>
@@ -36,4 +36,5 @@ Header.propTypes = {
     subtitle: PropTypes.string,
     type: PropTypes.string,
   }),
+  onDetail: PropTypes.bool, // Adiciona a tipagem da prop withoutLogo
 }

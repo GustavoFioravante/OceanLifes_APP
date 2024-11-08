@@ -1,6 +1,7 @@
 import React from 'react'
 import { HomeList, Header } from '../../components/Index'
 import { ScreenScrollContainer } from '../../components/Container'
+import FundoHeader from '../../../assets/FundoHeader.jpg'
 
 const FAKE_DATA_CHARACTERES = [
   {
@@ -60,7 +61,7 @@ export const Home = () => {
           title: 'OceanLifes',
           subtitle: 'A vida na água importa!',
           type: 'Wiki',
-          imageURL: require('../../../assets/FundoHeader.jpg'),
+          imageURL: FundoHeader,
         }}
       />
       <HomeList title='Conheça mais sobre nossa equipe!' data={FAKE_DATA_CHARACTERES} />

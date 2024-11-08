@@ -23,6 +23,7 @@ export const HeaderGradient = styled(LinearGradient)`
 
 export const ButtonsView = styled.View`
   display: flex;
+  margin-top: 5px;
   width: 100%;
   flex-direction: row;
   align-items: baseline;

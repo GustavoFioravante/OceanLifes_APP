@@ -1,22 +1,14 @@
 import React from 'react'
 import ImagemFundo from '../../../assets/Background.jpeg'
-import { StyleSheet, View, ImageBackground, TouchableOpacity } from 'react-native'
+import { StyleSheet, View, ImageBackground } from 'react-native'
 import { Text } from '../../components/Text/Text'
-import PropTypes from 'prop-types'
-import { ButtonContainer } from '../../components/NextButton/style'
 import { NextButton } from '../../components/NextButton'
 
-export const SplashScreenWindow = ({ navigation }) => {
-  const handlePress = () => {
-    navigation.navigate('Home')
-  }
-
+export const SplashScreenWindow = () => {
   return (
-    <TouchableOpacity style={styles.container} onPress={handlePress}>
+    <View style={styles.container}>
       <ImageBackground style={styles.ImageBackground} source={ImagemFundo} />
-      <ButtonContainer>
-        <NextButton label='' iconName='chevron-forward' onPress={handlePress} />
-      </ButtonContainer>
+      <NextButton destination='Home' />
       <View style={styles.box}>
         <Text size={50} lh={60}>
           EXPLORE
@@ -25,14 +17,8 @@ export const SplashScreenWindow = ({ navigation }) => {
           A BELEZA DA NATUREZA
         </Text>
       </View>
-    </TouchableOpacity>
+    </View>
   )
-}
-
-SplashScreenWindow.propTypes = {
-  navigation: PropTypes.shape({
-    navigate: PropTypes.func.isRequired,
-  }).isRequired,
 }
 
 export default SplashScreenWindow

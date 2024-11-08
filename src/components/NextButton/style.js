@@ -1,10 +1,7 @@
 import styled from 'styled-components/native'
 
-export const ButtonContainer = styled.TouchableOpacity`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  top: 60px;
-  left: 60px;
+export const NextButtonContainer = styled.TouchableOpacity`
+  position: absolute;
+  bottom: ${({ theme }) => theme.metrics.px(230)}px;
+  right: ${({ theme }) => theme.metrics.px(40)}px;
 `
