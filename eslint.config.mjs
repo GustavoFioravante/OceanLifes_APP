@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+
 import globals from 'globals'
 import pluginJs from '@eslint/js'
 import pluginReact from 'eslint-plugin-react'
@@ -11,9 +13,10 @@ export default [
     },
     env: {
       browser: true,
-      es2021: true,
       node: true,
+      'react-native/react-native': true,
     },
+
     files: ['/*.{js,mjs,cjs,jsx}'],
     languageOptions: {
       globals: {

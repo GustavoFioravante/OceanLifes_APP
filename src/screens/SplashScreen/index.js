@@ -8,7 +8,7 @@ export const SplashScreenWindow = () => {
   return (
     <View style={styles.container}>
       <ImageBackground style={styles.ImageBackground} source={ImagemFundo} />
-      <NextButton destination='Home' />
+      <NextButton destination='Login' />
       <View style={styles.box}>
         <Text size={50} lh={60}>
           EXPLORE
