@@ -36,5 +36,5 @@ Header.propTypes = {
     subtitle: PropTypes.string,
     type: PropTypes.string,
   }),
-  onDetail: PropTypes.bool, // Adiciona a tipagem da prop withoutLogo
+  onDetail: PropTypes.bool,
 }

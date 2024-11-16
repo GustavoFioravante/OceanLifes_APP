@@ -2,6 +2,7 @@ import React from 'react'
 import { HomeList, Header } from '../../components/Index'
 import { ScreenScrollContainer } from '../../components/Container'
 import FundoHeader from '../../../assets/FundoHeader.jpg'
+import { WikiList } from '../../components/Index'
 
 const FAKE_DATA_CHARACTERES = [
   {
@@ -53,6 +54,81 @@ const FAKE_DATA_CHARACTERES = [
   },
 ]
 
+const FAKE_DATA_ICONS = [
+  {
+    id: 5,
+    imageURL:
+      'https://cdn.discordapp.com/attachments/1289674036686753855/1305994648954867812/icon1.png?ex=67350dcc&is=6733bc4c&hm=50fda704b316b70c5a1235471b2f0b6fa1fec7c586a4bcc0f6ff757921823408&',
+    title: 'ICONE1',
+    subtitle: '',
+    description: 'null',
+  },
+  {
+    id: 6,
+    imageURL:
+      'https://cdn.discordapp.com/attachments/1289674036686753855/1305982782580850698/icon2.png?ex=673502bf&is=6733b13f&hm=cfd4399c69074563eff428d193513c76b88fe73797a4ca039766542c8804c688&',
+    title: 'ICONE2',
+    subtitle: '',
+    description: 'null',
+  },
+  {
+    id: 7,
+    imageURL:
+      'https://cdn.discordapp.com/attachments/1289674036686753855/1305982782832644217/icon3.png?ex=673502bf&is=6733b13f&hm=5f94eb714660c0f2a3fe9364807f24fbc1f296caf41ccb6dcc1edc8df3ff3312&',
+    title: 'ICONE3',
+    subtitle: '',
+    description: 'null',
+  },
+  {
+    id: 8,
+    imageURL:
+      'https://cdn.discordapp.com/attachments/1289674036686753855/1305982783168057384/icon4.png?ex=673502bf&is=6733b13f&hm=6c50a6c1af756a25c7cc4ec3ea981fe01968edf01509f47cf2989f53af5b75a0&',
+    title: '',
+    subtitle: '',
+    description: 'null',
+  },
+  {
+    id: 9,
+    imageURL:
+      'https://cdn.discordapp.com/attachments/1289674036686753855/1305982783532957716/icon5.png?ex=673502bf&is=6733b13f&hm=19f10a9a7cf868722b8847621dab6bc5c9ff7aabfdaf4dd67be23fc24fcea504&',
+    title: '',
+    subtitle: '',
+    description: 'null',
+  },
+  {
+    id: 10,
+    imageURL:
+      'https://cdn.discordapp.com/attachments/1289674036686753855/1305982783939940383/icon6.png?ex=673502bf&is=6733b13f&hm=20cf6dd4b2c019e9db47c3b27254604d92d085abdb0de4df2a47cc71e0548057&',
+    title: '',
+    subtitle: '',
+    description: 'null',
+  },
+  {
+    id: 11,
+    imageURL:
+      'https://cdn.discordapp.com/attachments/1289674036686753855/1305982784216760390/icon7.png?ex=673502bf&is=6733b13f&hm=6a866a7913fd1953683a201cbbda5edf418e79edc6cfde4fecc00fd43556985e&',
+    title: '',
+    subtitle: '',
+    description: 'null',
+  },
+  {
+    id: 12,
+    imageURL:
+      'https://cdn.discordapp.com/attachments/1289674036686753855/1305982784699109386/icon8.png?ex=673502bf&is=6733b13f&hm=0544889c0cf3be736f76da92a05007c2c9d5c85bdbca4633acdbe8da874111fa&',
+    title: '',
+    subtitle: '',
+    description: 'null',
+  },
+  {
+    id: 13,
+    imageURL:
+      'https://cdn.discordapp.com/attachments/1289674036686753855/1305982784938049586/icon9.png?ex=673502bf&is=6733b13f&hm=027362f9ab1b183d87e27e3bd2fe36b3594b59efa1e67171c41c246afe583722&',
+    title: '',
+    subtitle: '',
+    description: 'null',
+  },
+]
+
 export const Home = () => {
   return (
     <ScreenScrollContainer>
@@ -64,7 +140,8 @@ export const Home = () => {
           imageURL: FundoHeader,
         }}
       />
-      <HomeList title='Conheça mais sobre nossa equipe!' data={FAKE_DATA_CHARACTERES} />
+
+      <WikiList title='EXPLORAR' data={FAKE_DATA_ICONS} />
       <HomeList title='Conheça mais sobre nossa equipe!' data={FAKE_DATA_CHARACTERES} />
     </ScreenScrollContainer>
   )
