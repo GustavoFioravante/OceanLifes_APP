@@ -8,7 +8,7 @@ import { theme } from '../../standart/theme'
 export const HomeList = ({ data, title }) => {
   return (
     <ListContainer>
-      <Text ml={24} fontFamily='semiBold' size={20} color={'violet'} ls={-1}>
+      <Text ml={10} fontFamily='semiBold' size={23} color={'white'} ls={-1}>
         {title}
       </Text>
       <FlatList
@@ -19,7 +19,6 @@ export const HomeList = ({ data, title }) => {
         contentContainerStyle={{
           paddingTop: theme.metrics.px(12),
           paddingLeft: theme.metrics.px(10),
-          paddingBottom: theme.metrics.px(50),
         }}
       />
     </ListContainer>

@@ -4,7 +4,7 @@ import { useNavigation } from '@react-navigation/native'
 import { useDataStore } from '../../Services/stores/index'
 import PropTypes from 'prop-types'
 
-export const Card = ({ item, showTitle }) => {
+export const Card = ({ item, showTitle = false }) => {
   const { setSelectedData } = useDataStore()
   const navigation = useNavigation()
 
@@ -24,11 +24,7 @@ export const Card = ({ item, showTitle }) => {
 Card.propTypes = {
   item: PropTypes.shape({
     imageURL: PropTypes.string,
-    title: PropTypes.string, // Adicionando validação do título
+    title: PropTypes.string,
   }),
-  showTitle: PropTypes.bool, // Nova prop para controlar a exibição do título
-}
-
-Card.defaultProps = {
-  showTitle: false, // Default é false, ou seja, título não é exibido por padrão
+  showTitle: PropTypes.bool,
 }

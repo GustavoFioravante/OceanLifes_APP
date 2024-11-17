@@ -9,8 +9,8 @@ export const HeaderContainer = styled.View`
 `
 
 export const HeaderImageBackground = styled.ImageBackground`
-  width: 100%;
-  height: 100%;
+  width: ${({ theme }) => theme.metrics.px(385)}px;
+  height: ${({ theme }) => theme.metrics.px(470)}px;
 `
 export const HeaderGradient = styled(LinearGradient)`
   display: flex;

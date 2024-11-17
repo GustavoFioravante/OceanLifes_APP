@@ -8,7 +8,7 @@ export const GoBackButton = () => {
   const navigation = useNavigation()
   return (
     <GoBackContainer onPress={() => navigation.goBack()}>
-      <Ionicons name='chevron-back' color={theme.colors.white} size={theme.metrics.px(28)} />
+      <Ionicons name='chevron-back' color={theme.colors.violet} size={theme.metrics.px(28)} />
     </GoBackContainer>
   )
 }
