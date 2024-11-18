@@ -1,7 +1,7 @@
 import styled from 'styled-components/native'
 
 export const CustomText = styled.Text`
-  color: ${({ color, theme }) => theme.colors[color || 'white']};
+  color: ${({ color, theme }) => color || theme.colors.white};
   font-size: ${({ theme, size }) => theme.metrics.px(size || 20)}px;
   line-height: ${({ theme, lh }) => theme.metrics.px(lh || 30)}px;
   letter-spacing: ${({ theme, ls }) => theme.metrics.px(ls || 2)}px;

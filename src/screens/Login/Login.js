@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import { TouchableOpacity, ImageBackground, StyleSheet } from 'react-native'
+import { TouchableOpacity } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { Ionicons } from '@expo/vector-icons'
 import FundoImage from '../../../assets/Background.jpeg'
+import { theme } from '../../standart/theme'
 
 import {
   Container,
@@ -15,6 +16,7 @@ import {
   Message,
   Overlay,
   ButtonContainer,
+  ImageBackground,
 } from './style'
 
 export const Login = () => {
@@ -26,7 +28,7 @@ export const Login = () => {
   const handleSubmit = () => {
     if (username === 'admin' && password === 'admin') {
       setMessage('Login bem-sucedido')
-      navigation.navigate('Home')
+      navigation.replace('DrawerNavigator')
     } else {
       setMessage('Usuário ou senha inválidos!')
     }
@@ -37,8 +39,15 @@ export const Login = () => {
   }
 
   return (
-    <ImageBackground style={styles.ImageBackground} source={FundoImage}>
-      <Overlay>
+    <ImageBackground source={FundoImage}>
+      <Overlay
+        style={{
+          transform: [
+            { translateX: theme.metrics.px(-62) },
+            { translateY: theme.metrics.px(-140) },
+          ],
+        }}
+      >
         <Container>
           <Title>Login</Title>
 
@@ -83,16 +92,5 @@ export const Login = () => {
     </ImageBackground>
   )
 }
-
-const styles = StyleSheet.create({
-  ImageBackground: {
-    flex: 1,
-    height: 1100,
-    width: 500,
-    right: 85,
-    resizeMode: 'cover',
-    justifyContent: 'center',
-  },
-})
 
 export default Login

@@ -42,8 +42,9 @@ export const Cadastro = () => {
     <ImageBackground style={styles.ImageBackground} source={FundoImage}>
       <Overlay>
         <GoBackContainerr>
-          <GoBackButton />
+          <GoBackButton color='white' />
         </GoBackContainerr>
+
         <Container>
           <Title>Cadastre-se</Title>
 

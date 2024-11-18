@@ -5,5 +5,6 @@ export const WikiContainer = styled.View`
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 100%;
+  width: ${({ theme }) => theme.metrics.px(380)}px;
+  height: ${({ theme }) => theme.metrics.px(588)}px;
 `

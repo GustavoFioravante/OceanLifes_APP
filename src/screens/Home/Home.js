@@ -29,7 +29,7 @@ const FAKE_DATA_CHARACTERES = [
     id: 2,
     imageURL:
       'https://cdn.discordapp.com/attachments/1289674036686753855/1304096354976665680/SalatielADS.jpg?ex=672e25df&is=672cd45f&hm=d3c31a8aaae3b63ce2b3cc96e10887bc794753f9433043b89c1cf3e8c34bcd6a&',
-    title: 'Coordenador e HeadLiner',
+    title: 'Coordenador',
     showTag: true,
     type: 'Bio',
     subtitle: 'Salatiel Simião de Oliveira',
@@ -57,9 +57,9 @@ const FAKE_DATA_CHARACTERES = [
     imageURL:
       'https://cdn.discordapp.com/attachments/1289674036686753855/1307487373294305351/LeoADS.jpg?ex=673a7c01&is=67392a81&hm=ab709b414e39f202487aaedaef7075d316d7d85c6f558b82d67a1ce6d8ea8597&',
     title: 'Analista',
-    subtitle: 'Leonardo Araujo Silva',
     showTag: true,
     type: 'Bio',
+    subtitle: 'Leonardo Araujo Silva',
   },
 ]
 
@@ -170,8 +170,12 @@ export const Home = () => {
           podermos incentivar futuras gerações a como coexistir com ecossistemas marinhos e
           preservar o atual catalogo de espécies. este projeto se destina a publico de todas as
           idades que desejam aprender mais sobre como preservar a flora marítima e sendo um projeto
-          teoricamente \Opensource\ nossos lucros veem através de doações, contribuições e anúncios
-          á fim de aumentarmos o publico alvo e começamos a criar workshops sobre o assunto.
+          teoricamente *Opensource* (Opensource significa código aberto, em português. Quer dizer
+          que uma aplicação tem seu código aberto e disponível para qualquer pessoa que pretende
+          modificar e até redistribuir o software. Contudo, há restrições importantes quanto a como
+          isso pode ser feito, o que visa a estabelecer certo controle e ordem.) nossos lucros veem
+          através de doações, contribuições e anúncios á fim de aumentarmos o publico alvo e
+          começamos a criar workshops sobre o assunto.
         </Text>
 
         <HomeList title='Conheça mais sobre nossa equipe!' data={FAKE_DATA_CHARACTERES} />

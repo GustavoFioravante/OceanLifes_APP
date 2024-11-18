@@ -7,4 +7,5 @@ export const colors = {
   lavander: '#E6E6FA',
   lightCyan: '#E0FFFF',
   AliceBlue: '#F0F8FF',
+  DarkBlue: '#1e1782',
 }

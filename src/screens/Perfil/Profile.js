@@ -9,12 +9,14 @@ import {
   InfoText,
   InfoTitle,
   ButtonsView,
+  Background,
 } from './styles'
 import { StyleSheet, View } from 'react-native'
 import { GoBackButton } from '../../components/GoBack/index'
 import { theme } from '../../standart/theme'
 import { useNavigation } from '@react-navigation/native'
 import { IconButton } from '../../components/IconButton'
+import { ResetButton } from '../../components/ResetButton/Reset'
 
 const FAKE_DATA_CHARACTERES = [
   {
@@ -27,7 +29,7 @@ const FAKE_DATA_CHARACTERES = [
   },
 ]
 
-export const userProfile = ({ onDetail }) => {
+export const UserProfile = ({ onDetail }) => {
   const user = FAKE_DATA_CHARACTERES[0]
   const navigation = useNavigation()
 
@@ -36,7 +38,7 @@ export const userProfile = ({ onDetail }) => {
   }
 
   return (
-    <View style={styles.Background}>
+    <Background>
       <ButtonsView>
         {!onDetail && <IconButton label='' iconName='list' onPress={openMenu} />}
       </ButtonsView>
@@ -51,16 +53,17 @@ export const userProfile = ({ onDetail }) => {
           <InfoTitle>Bio</InfoTitle>
           <InfoText>{user.bio}</InfoText>
         </InfoSection>
+        <ResetButton style={styles.resetButton} />
       </Container>
-    </View>
+    </Background>
   )
 }
 
 const styles = StyleSheet.create({
-  Background: {
-    flex: 1,
-    resizeMode: 'cover',
-    justifyContent: 'center',
-    backgroundColor: '#1e1782',
+  resetButton: {
+    position: 'absolute',
+    bottom: 50,
+    right: 40,
+    zIndex: 1,
   },
 })
